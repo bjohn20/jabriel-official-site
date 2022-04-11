@@ -3,6 +3,7 @@
 }
 
 body {
+  color: white;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -45,8 +46,8 @@ body {
 }
 
 header {
-  flex: 0 0 auto;
-  padding: 1.875rem 0 5.625rem;
+  flex: none;
+  padding: rem(30) 0 rem(90) 0;
   position: relative;
   text-align: center;
   z-index: 1000;
@@ -58,13 +59,17 @@ header {
 
     > li {
       display: inline-block;
-      font-size: 1.375rem;
+      font-size: rem(22);
       vertical-align: middle;
+    }
+
+    + li {
+      margin-left: rem(12);
     }
   }
 
   nav {
-    margin-top: 0.9375rem;
+    margin-top: rem(15);
 
     > ul {
       list-style: none;
@@ -73,9 +78,13 @@ header {
 
       > li {
         display: inline-block;
-        font-size: 1rem;
+        font-size: rem(16);
         text-transform: lowercase;
         vertical-align: middle;
+      }
+
+      + li {
+        margin-left: rem(8);
       }
     }
   }
@@ -86,4 +95,22 @@ header {
   max-width: 1230px;
   padding: 0 15px;
   width: 100%;
+}
+
+main {
+  flex: auto;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+  section {
+    margin: 0 auto;
+    // h1 {
+    //   // left: 0;
+    //   // margin: 0;
+    //   // position: absolute;
+    //   // right: 0;
+    //   align-self: center;
+    // }
+  }
 }
